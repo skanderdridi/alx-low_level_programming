@@ -5,7 +5,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-
+#include <stdio.h>
 /**
  * main - assign Complete the source code in order to print whether the number
  *                stored in the variable n is positive or negative.
