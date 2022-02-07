@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - print the combination of three digits
  * without repeating the same digit
