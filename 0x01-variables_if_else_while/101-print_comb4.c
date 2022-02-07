@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - print the combination of three digits
  * without repeating the same digit
@@ -31,6 +32,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	
 	return (0);
 }
