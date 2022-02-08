@@ -3,12 +3,12 @@
 /**
  * add - add two numbers
  *
- * @n: first number
- * @p: second number
+ * @n: first  value
+ * @p: second value
  *
  * Return: result of addition
  **/
-int add(int n, int p)
+int add(int n, int c)
 {
-	return (n + p);
+	return (n + c);
 }
