@@ -7,9 +7,8 @@
  *
  * Return: 1 lowercase 0 otherwise
  **/
-int main(void)
+int _islower(int c)
 {
-	int c;
 	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
