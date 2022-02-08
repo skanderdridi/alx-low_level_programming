@@ -1,14 +1,15 @@
 #include "main.h"
-
 /**
- * _isalpha - check whether character is alpabetical
- * or not.
+ * _islower - check if character is lowercase
+ * @c: character
  *
- * Return: 1 alphabetical 0 otherwise
+ *
+ * Return: 1 lowercase 0 otherwise
  **/
-int _isalpha(int c)
+int main(void)
 {
-	if (c >= 'A' && c <= 'Z')
+	int c;
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
@@ -16,5 +17,4 @@ int _isalpha(int c)
 	{
 		return (0);
 	}
-
 }
