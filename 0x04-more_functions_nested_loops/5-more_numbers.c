@@ -1,23 +1,23 @@
 #include "main.h"
 /**
- * more_numbers - prints numbers
+ * more_numbers - check the code for Holberton School students.
  *
- * Return: void doesn't return
+ * Return: Always 0.
+ *
+ *
  */
+
 void more_numbers(void)
 {
-	int i;
-	int s;
+	int i, j;
 
-	for (s = 0; s <= 9; s++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (i = 0; i <= 14; i++)
+		for (j  = 0; j <= 14; j++)
 		{
-			if (i > 9)
-			{
-				_putchar(i / 10 + '0');
-			}
-			_putchar(i % 10 + '0');
+			if (j > 9)
+				_putchar((j / 10) + '0');
+			_putchar((j % 10) + '0');
 		}
 		_putchar('\n');
 	}
