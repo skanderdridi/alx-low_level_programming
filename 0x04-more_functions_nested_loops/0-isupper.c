@@ -7,18 +7,16 @@
  *
  * Return: Returns 1 if c is (uppercase) Returns 0 (otherwise)
  **/
-int _isupper(int)
+int _isupper(int c)
 {
-    char c;
-    c = 'A';
-    
     if (c >= 'A' && c <= 'Z')
     {
     	printf("%c: 1 \n", c);
+		return (1);
 	}
 	else
 	{
 		printf("%c: 0 \n", c);
+			return (0)
 	}
-	return(0);
 }
