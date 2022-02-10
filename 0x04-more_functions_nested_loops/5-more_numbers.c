@@ -1,24 +1,26 @@
 #include "main.h"
+
 /**
  * more_numbers - prints numbers(à-14)
  *
  * Return: void doesn't return
  */
-void more_numbers(void)
-{
-	int n;
-	int c;
 
-	for (c = 0; c <= 9; c++)
+void more_numbers(void)
+	int x, y;
+
+	for (x = 0; x < 10; x++)
 	{
-		for (n = 0; n <= 14; n++)
+		for (y = 0; y <= 14; y++)
 		{
-			if (n > 9)
+			if (y > 9)
 			{
-				_putchar(n / 10 + '0');
+				_putchar((y / 10) + '0');
 			}
-			_putchar(n % 10 + '0');
+
+			_putchar((y % 10) + '0');
 		}
+
 		_putchar('\n');
 	}
 }
