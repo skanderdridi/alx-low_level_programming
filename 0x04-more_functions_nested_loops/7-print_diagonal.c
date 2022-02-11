@@ -1,14 +1,11 @@
 #include "main.h"
 
 /**
- * print - print diagonal line '\$' n times
- * @n: time of n
- *
- * Return: void
- **/
+ * print_diagonal - Draws a diagonal line using the \ character.
+ * @n: The number of \ characters to be printed.
+ */
 void print_diagonal(int n)
 {
-
 	int l, s;
 
 	if (n > 0)
