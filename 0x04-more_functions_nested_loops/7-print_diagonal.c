@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 
 /**
  * print - print diagonal line '\$' n times
@@ -8,9 +6,7 @@
  *
  * Return: void
  **/
-
 void print_diagonal(int n)
-
 {
 
 	int l, s;
@@ -22,7 +18,6 @@ void print_diagonal(int n)
 			for (s = 1; s <= l - 1; s++)
 			_putchar(' ');
 			_putchar('\\');
-			_putchar('$');
 			_putchar('\n');
 		}
 	}
