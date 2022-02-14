@@ -13,10 +13,10 @@ void print_rev(char *s)
 	{
 		if (s[l] == '\0')
 			break;
-		count++;
+		l++;
 	}
 
-	for (count--; l >= 0; l--)
+	for (l--; l >= 0; l--)
 		_putchar(s[l]);
 	_putchar('\n');
 }
