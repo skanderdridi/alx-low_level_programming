@@ -5,19 +5,18 @@
  *
  * @s: string
  **/
-void print_rev(char *s);
+void print_rev(char *s)
 {
-	int c = 0;
+	int l = 0;
 
-	while (s[c] != '\0')
+	while (l >= 0)
 	{
-		c++;
+		if (s[l] == '\0')
+			break;
+		count++;
 	}
 
-	for (c -= 1; c >= 0; c--)
-	{
-		_putchar(s[c]);
-	}
-
+	for (count--; l >= 0; l--)
+		_putchar(s[l]);
 	_putchar('\n');
 }
