@@ -4,8 +4,8 @@
 * @s:  pointer to the adderss of string s
 * @to: string to set value to
 * Return: nothing
- */
+*/
 void set_string(char **s, char *to)
 {
-      *s = to;
+*s = to;
 }
