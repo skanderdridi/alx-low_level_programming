@@ -6,7 +6,7 @@
 * @to: set value the of string
 *
 * Return: nothing
- */
+*/
 void set_string(char **s, char *to)
 {
       *s = to;
