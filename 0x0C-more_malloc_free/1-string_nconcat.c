@@ -1,22 +1,21 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 /**
-* length - long of a string
-* @string: char
-* Return: length
+* string_nconcat - Entry point
+* @s1: char
+* @s2: char
+* @n: unsigned int
+* Return: Always 0 (Success)
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, k, l;
 	char *ptr;
-
 	i = 0;
 	j = 0;
 	k = 0;
 	l = 0;
-
 	if (s1 != NULL)
 	{
 		while (s1[i] != '\0')
@@ -44,4 +43,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	ptr[k] = '\0';
 	return (ptr);
-}    
+}
