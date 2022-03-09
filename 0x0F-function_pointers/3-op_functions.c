@@ -18,7 +18,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 
- /**
+/**
  * op_sub - calculate the Difference of Minuend - Subtrahend numbers.
  * @a: first number.
  * @b: second number.
@@ -30,7 +30,7 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 
- /**
+/**
  * op_mul - calculate the Product of two numbers.
  * @a: first number.
  * @b: second number.
@@ -42,7 +42,7 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 
- /**
+/**
  * op_div - calculate the Quotient of Dividend & Divisor numbers.
  * @a: first number.
  * @b: second number.
@@ -54,8 +54,8 @@ int op_div(int a, int b)
 	return (a / b);
 }
 
- /**
- * op_mod - calculate the Remainder of Dividend & Divisor numbers.
+/**
+ * op_mod -  calculate the Remainder of Dividend & Divisor numbers.
  * @a: first number.
  * @b: second number.
  *
