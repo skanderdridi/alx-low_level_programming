@@ -1,65 +1,52 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include "variadic_functions.h"
+#include <string.h>
+#include <stdlib.h>
 
 /**
- * print_comma - prints a comma  based off char from print_all
- * @c: char from print all
- * Return: void
+ * print_all - func to print strings
+ * @format: string to be printed
  */
-
-void print_comma(const char *c)
-{
-	if (*c == 'c' || *c == 'i' || *c == 'f' || *c == 's')
-		printf(", ");
-}
-
-/**
-* print_all - prints anything
-* @format: format of the string
-* Return: void
-*/
-
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0;
-	char *string;
-
-	va_start(args, format);
-	while (format && *(format + i))
+	const char *t;
+	char *s;
+	unsigned int i;
+	double d;
+	va_list zug;
+	int len, index;
+	len = (strlen(format) - 1);
+	index = 0;
+	va_start(zug, format);
+	t = format;
+	while (*t != '\0')
 	{
-		switch (*(format + i))
+		switch (*t)
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				string = va_arg(args, char *);
-				if (string == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
-				else
-				{
-					printf("%s", string);
-					break;
-				}
-			default:
-				i++;
-				continue;
+		case 'c':
+			i = va_arg(zug, int);
+			_putchar(i);
+			break;
+		case 'i':
+			i = va_arg(zug, int);
+			printf("%d", i);
+			break;
+		case 'f':
+			d = va_arg(zug, double);
+			printf("%f", d);
+			break;
+		case 's':
+			s = va_arg(zug, char *);
+			printf("%s", s);
+			break;
 		}
-		if (*(format + i + 1))
-			print_comma((format + i));
-		i++;
+		if (index < len && (*t == 'i' || *t == 'c' || *t == 'f' || *t == 's'))
+		{
+			printf(", ");
+			index++;
+			t++;
+		}
 	}
-	va_end(args);
 	putchar('\n');
 }
