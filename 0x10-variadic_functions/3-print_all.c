@@ -1,81 +1,47 @@
 #include "variadic_functions.h"
-/**
- * print_chars - prints characters
- * @str_numbers: parameter
- * Return: void
- */
-void print_chars(va_list str_numbers)
-{
-	printf("%c", va_arg(str_numbers, int));
-}
-/**
- * print_integers - prints integers
- * @str_numbers: parameter
- * Return: void
- */
-void print_integers(va_list str_numbers)
-{
-	printf("%d", va_arg(str_numbers, int));
-}
-/**
- * print_floats - prints floats
- * @str_numbers: parameter
- * Return: void
- */
-void print_floats(va_list str_numbers)
-{
-	printf("%f", va_arg(str_numbers, double));
-}
-/**
- * print_string - prints strings
- * @str_numbers: parameter
- * @str_numbers: parameter
- */
-void print_string(va_list str_numbers)
-{
-	char *str = va_arg(str_numbers, char *);
 
-	if (str == NULL)
-		str = "(nil)";
-	printf("%s", str);
-}
 /**
- * print_all - prints anything
- * @format: constant pointer
+ * print_all - prints anything., followed by a new line.
+ * @format: const char const
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
+	char *p;
+	int x = 0, y = 1;
+	va_list m;
 
-	f_t formats[] = {
-		{"c", print_chars},
-		{"i", print_integers},
-		{"f", print_floats},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-	va_list str_numbers;
-	char *separate = "";
-
-	va_start(str_numbers, format);
-	i = 0;
-	while (format[i] && format)
+	va_start(m, format);
+	while (format && format[x])
 	{
-		j = 0;
-		while (formats[j].symbol != NULL)
+		switch (format[x])
 		{
-			if (formats[j].symbol[0] == format[i])
-			{
-				printf("%s", separate);
-				formats[j].p(str_numbers);
-				separate = ", ";
+			case 'c':
+				printf("%c", va_arg(m, int));
 				break;
-			}
-			j++;
+			case 'i':
+				printf("%d", va_arg(m, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(m, double));
+				break;
+			case 's':
+				p = va_arg(m, char*);
+				if (p != NULL)
+				{
+					printf("%s", p);
+					break;
+				}
+				printf("(nil)");
+				break;
+			default:
+				y = 0;
 		}
-		i++;
+		if (format[x + 1] != 0 && y)
+			printf(", ");
+		x++;
+		y++;
 	}
 	printf("\n");
-	va_end(str_numbers);
+	va_end(m);
 }
