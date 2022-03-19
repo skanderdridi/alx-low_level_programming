@@ -1,0 +1,13 @@
+#!/bin/bash
+for brute_force in {a..z}{a..z}{a..z}{a..z}; do
+  ((counter++))
+  if openssl \
+    enc -d -aes-128-ecb -base64 \
+    -pass pass:$brute_force \
+    -in crackme2 -out 101-crackme_password
+  then
+    break
+  else
+    echo $counter $brute_force
+  fi
+done
