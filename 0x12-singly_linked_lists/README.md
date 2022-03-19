@@ -1,5 +1,4 @@
 
-You have a captain's log due before 2022-03-20 (in 1 day)! Log it now!
 0x12. C - Singly linked lists
  By Julien Barbier
  Weight: 1
